@@ -27,21 +27,143 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jBEliminar = new javax.swing.JButton();
+        jBborrar = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        jBRaiz = new javax.swing.JButton();
+        jB7 = new javax.swing.JButton();
+        jB8 = new javax.swing.JButton();
+        jB9 = new javax.swing.JButton();
+        jBIgual = new javax.swing.JButton();
+        jB4 = new javax.swing.JButton();
+        jB5 = new javax.swing.JButton();
+        jB6 = new javax.swing.JButton();
+        jBMultiplicacion = new javax.swing.JButton();
+        jB0 = new javax.swing.JButton();
+        jB2 = new javax.swing.JButton();
+        jB3 = new javax.swing.JButton();
+        jBResta = new javax.swing.JButton();
+        jBPunto = new javax.swing.JButton();
+        jBSuma = new javax.swing.JButton();
+        jB1 = new javax.swing.JButton();
+        jBMasMenos = new javax.swing.JButton();
+        jBDivision = new javax.swing.JButton();
+        jBPorcentaje = new javax.swing.JButton();
+        jBUnoX = new javax.swing.JButton();
+        jText = new javax.swing.JTextField();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jBEliminar.setText("C");
+        getContentPane().add(jBEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 60, 40));
+
+        jBborrar.setText("← ");
+        getContentPane().add(jBborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 60, 40));
+
+        jButton25.setText("CE");
+        getContentPane().add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 60, 40));
+
+        jBRaiz.setText("√");
+        getContentPane().add(jBRaiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 60, 40));
+
+        jB7.setText("7");
+        getContentPane().add(jB7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 60, 40));
+
+        jB8.setText("8");
+        getContentPane().add(jB8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 60, 40));
+
+        jB9.setText("9");
+        getContentPane().add(jB9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 60, 40));
+
+        jBIgual.setText("=");
+        getContentPane().add(jBIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 60, 90));
+
+        jB4.setText("4");
+        getContentPane().add(jB4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 60, 40));
+
+        jB5.setText("5");
+        jB5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jB5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 60, 40));
+
+        jB6.setText("6");
+        getContentPane().add(jB6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 60, 40));
+
+        jBMultiplicacion.setText("x");
+        getContentPane().add(jBMultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 60, 40));
+
+        jB0.setText("0");
+        getContentPane().add(jB0, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 120, 40));
+
+        jB2.setText("2");
+        getContentPane().add(jB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 60, 40));
+
+        jB3.setText("3");
+        getContentPane().add(jB3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 60, 40));
+
+        jBResta.setText("-");
+        getContentPane().add(jBResta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 60, 40));
+
+        jBPunto.setText(".");
+        getContentPane().add(jBPunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 60, 40));
+
+        jBSuma.setText("+");
+        getContentPane().add(jBSuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 60, 40));
+
+        jB1.setText("1");
+        getContentPane().add(jB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 60, 40));
+
+        jBMasMenos.setText("±");
+        getContentPane().add(jBMasMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 60, 40));
+
+        jBDivision.setText("÷");
+        getContentPane().add(jBDivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 60, 40));
+
+        jBPorcentaje.setText("%");
+        getContentPane().add(jBPorcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 60, 40));
+
+        jBUnoX.setText("1/x");
+        getContentPane().add(jBUnoX, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 60, 40));
+
+        jText.setText("                                                                                                      0");
+        jText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 300, 40));
+
+        jMenu4.setText("View");
+        jMenuBar1.add(jMenu4);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Help");
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB5ActionPerformed
+
+    private void jTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +201,33 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jB0;
+    private javax.swing.JButton jB1;
+    private javax.swing.JButton jB2;
+    private javax.swing.JButton jB3;
+    private javax.swing.JButton jB4;
+    private javax.swing.JButton jB5;
+    private javax.swing.JButton jB6;
+    private javax.swing.JButton jB7;
+    private javax.swing.JButton jB8;
+    private javax.swing.JButton jB9;
+    private javax.swing.JButton jBDivision;
+    private javax.swing.JButton jBEliminar;
+    private javax.swing.JButton jBIgual;
+    private javax.swing.JButton jBMasMenos;
+    private javax.swing.JButton jBMultiplicacion;
+    private javax.swing.JButton jBPorcentaje;
+    private javax.swing.JButton jBPunto;
+    private javax.swing.JButton jBRaiz;
+    private javax.swing.JButton jBResta;
+    private javax.swing.JButton jBSuma;
+    private javax.swing.JButton jBUnoX;
+    private javax.swing.JButton jBborrar;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JTextField jText;
     // End of variables declaration//GEN-END:variables
 }
