@@ -52,9 +52,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jBUnoX = new javax.swing.JButton();
         jText = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        jMView = new javax.swing.JMenu();
+        jMEdit = new javax.swing.JMenu();
+        jMHelp = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -143,14 +143,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         getContentPane().add(jText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 300, 40));
 
-        jMenu4.setText("View");
-        jMenuBar1.add(jMenu4);
+        jMView.setText("View");
+        jMenuBar1.add(jMView);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMEdit.setText("Edit");
+        jMenuBar1.add(jMEdit);
 
-        jMenu3.setText("Help");
-        jMenuBar1.add(jMenu3);
+        jMHelp.setText("Help");
+        jMenuBar1.add(jMHelp);
 
         setJMenuBar(jMenuBar1);
 
@@ -224,9 +224,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jBUnoX;
     private javax.swing.JButton jBborrar;
     private javax.swing.JButton jButton25;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMEdit;
+    private javax.swing.JMenu jMHelp;
+    private javax.swing.JMenu jMView;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JTextField jText;
     // End of variables declaration//GEN-END:variables
