@@ -1,16 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ec.edu.ups.vista;
 
 /**
  *
  * @author Domenika Delgado
+ * 
+ * Programa sobre una interfaz grafica de una calculadora
+ * que permite realizar operaciones aritméticas de complejidad básica
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
 
+    //private boolean punto=true;
+    String valor1, valor2, signo, contenido;
+    Double resul;
     /**
      * Creates new form VentanaPrincipal
      */
@@ -27,9 +29,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jBEliminar = new javax.swing.JButton();
-        jBborrar = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
+        jBLimpiar = new javax.swing.JButton();
+        jBBorrar = new javax.swing.JButton();
+        jBCE = new javax.swing.JButton();
         jBRaiz = new javax.swing.JButton();
         jB7 = new javax.swing.JButton();
         jB8 = new javax.swing.JButton();
@@ -61,31 +63,76 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jBEliminar.setText("C");
-        getContentPane().add(jBEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 60, 40));
+        jBLimpiar.setText("C");
+        jBLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBLimpiarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 60, 40));
 
-        jBborrar.setText("← ");
-        getContentPane().add(jBborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 60, 40));
+        jBBorrar.setText("← ");
+        jBBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBBorrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 60, 40));
 
-        jButton25.setText("CE");
-        getContentPane().add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 60, 40));
+        jBCE.setText("CE");
+        jBCE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCEActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBCE, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 60, 40));
 
         jBRaiz.setText("√");
+        jBRaiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRaizActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBRaiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 60, 40));
 
         jB7.setText("7");
+        jB7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB7ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 60, 40));
 
         jB8.setText("8");
+        jB8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB8ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 60, 40));
 
         jB9.setText("9");
+        jB9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB9ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 60, 40));
 
         jBIgual.setText("=");
+        jBIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBIgualActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 60, 90));
 
         jB4.setText("4");
+        jB4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 60, 40));
 
         jB5.setText("5");
@@ -97,45 +144,109 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jB5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 60, 40));
 
         jB6.setText("6");
+        jB6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 60, 40));
 
         jBMultiplicacion.setText("x");
+        jBMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBMultiplicacionActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBMultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 60, 40));
 
         jB0.setText("0");
+        jB0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB0ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB0, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 120, 40));
 
         jB2.setText("2");
+        jB2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 60, 40));
 
         jB3.setText("3");
+        jB3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 60, 40));
 
         jBResta.setText("-");
+        jBResta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRestaActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBResta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 60, 40));
 
         jBPunto.setText(".");
+        jBPunto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPuntoActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBPunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 60, 40));
 
         jBSuma.setText("+");
+        jBSuma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSumaActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBSuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 60, 40));
 
         jB1.setText("1");
+        jB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 60, 40));
 
         jBMasMenos.setText("±");
+        jBMasMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBMasMenosActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBMasMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 60, 40));
 
         jBDivision.setText("÷");
+        jBDivision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBDivisionActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBDivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 60, 40));
 
         jBPorcentaje.setText("%");
+        jBPorcentaje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPorcentajeActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBPorcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 60, 40));
 
         jBUnoX.setText("1/x");
+        jBUnoX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBUnoXActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBUnoX, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 60, 40));
 
-        jText.setText("                                                                                                      0");
         jText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextActionPerformed(evt);
@@ -156,14 +267,218 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //Metodo para realizar las operaciones
+     public static String operaciones(String valor1, String valor2, String signo){
+        Double resulCalc=0.0;
+        String respuesta;
+        // las 5 opreaciones 
+        if(signo.equals("+")){
+            resulCalc= Double.parseDouble(valor1)+Double.parseDouble(valor2);
+                    }else if(signo.equals("-")){ 
+                    resulCalc= Double.parseDouble(valor1)-Double.parseDouble(valor2);
+                    }else if(signo.equals("*")){
+                        resulCalc= Double.parseDouble(valor1)*Double.parseDouble(valor2);
+            
+                    }else if(signo.equals("/")){
+                        resulCalc= Double.parseDouble(valor1)/Double.parseDouble(valor2);
+            
+                    }else if(signo.equals("x^y")){
+                        resulCalc= Math.pow(Double.parseDouble(valor1), Double.parseDouble(valor2));
+                    }
+                    respuesta=resulCalc.toString();
+                    return respuesta;
+        
+    }
+    
+    
+    
+    //Numero 5
     private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
         // TODO add your handling code here:
+         jText.setText(jText.getText()+"5");
     }//GEN-LAST:event_jB5ActionPerformed
 
     private void jTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextActionPerformed
+
+    //CE
+    private void jBCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBCEActionPerformed
+
+    //Borrar un numero mal ingresado
+    private void jBBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBBorrarActionPerformed
+
+    //Limpiar todo de la mini consola
+    private void jBLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimpiarActionPerformed
+        // TODO add your handling code here:
+        jText.setText(" ");
+    }//GEN-LAST:event_jBLimpiarActionPerformed
+
+    //Mas o menos 
+    private void jBMasMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMasMenosActionPerformed
+        // TODO add your handling code here:
+        contenido=jText.getText();
+         if(contenido.length()>0){
+             resul=(-1)*Double.parseDouble(contenido);
+            jText.setText(resul.toString());
+         }
+    }//GEN-LAST:event_jBMasMenosActionPerformed
+
+    //Raiz
+    private void jBRaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRaizActionPerformed
+        // TODO add your handling code here:
+        contenido=jText.getText();
+        if(contenido.length()>0){
+            resul=Math.sqrt(Double.parseDouble(contenido));
+            jText.setText(resul.toString());
+        }
+    }//GEN-LAST:event_jBRaizActionPerformed
+
+    //Numero 7
+    private void jB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"7");
+    }//GEN-LAST:event_jB7ActionPerformed
+
+    //Numero 8
+    private void jB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"8");
+    }//GEN-LAST:event_jB8ActionPerformed
+
+    //Numero 9
+    private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"9");
+    }//GEN-LAST:event_jB9ActionPerformed
+
+    //Division ÷ 
+    private void jBDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDivisionActionPerformed
+        // TODO add your handling code here:
+        if(!jText.getText().equals("")){
+            valor1=jText.getText();
+            signo="/";
+            jText.setText("");
+        }
+    }//GEN-LAST:event_jBDivisionActionPerformed
+
+    //Porcentaje %
+    private void jBPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPorcentajeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBPorcentajeActionPerformed
+
+    //Numero 4
+    private void jB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"4");
+    }//GEN-LAST:event_jB4ActionPerformed
+
+    //Numero 6
+    private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"6");
+    }//GEN-LAST:event_jB6ActionPerformed
+
+    
+    //Multiplicacion x
+    private void jBMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMultiplicacionActionPerformed
+        // TODO add your handling code here:
+         if(!jText.getText().equals("")){
+            valor1=jText.getText();
+            signo="*";
+            jText.setText("");
+        }
+    }//GEN-LAST:event_jBMultiplicacionActionPerformed
+
+    //1 sobre x (1/x)
+    private void jBUnoXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBUnoXActionPerformed
+        // TODO add your handling code here:
+        contenido=jText.getText();
+        if(contenido.length()>0){
+            resul=1/(Double.parseDouble(contenido));
+            jText.setText(resul.toString());
+            
+        }
+    }//GEN-LAST:event_jBUnoXActionPerformed
+
+    //Numero 1
+    private void jB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"1");
+    }//GEN-LAST:event_jB1ActionPerformed
+
+    //Numero 2
+    private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"2");
+    }//GEN-LAST:event_jB2ActionPerformed
+
+    //Numero 3
+    private void jB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"3");
+    }//GEN-LAST:event_jB3ActionPerformed
+
+    //Resta -
+    private void jBRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRestaActionPerformed
+        // TODO add your handling code here:
+        if(!jText.getText().equals("")){
+            valor1=jText.getText();
+            signo="-";
+            jText.setText("");
+        }
+    }//GEN-LAST:event_jBRestaActionPerformed
+
+    //Igual =
+    private void jBIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIgualActionPerformed
+        // TODO add your handling code here:
+        String resulTotal;
+        valor2=jText.getText();
+        if(!valor2.equals("")){
+            resulTotal= operaciones(valor1, valor2, signo);
+            jText.setText(resulTotal);
+        }
+    }//GEN-LAST:event_jBIgualActionPerformed
+
+    //Numero 0
+    private void jB0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB0ActionPerformed
+        // TODO add your handling code here:
+        jText.setText(jText.getText()+"0");
+    }//GEN-LAST:event_jB0ActionPerformed
+
+    //Punto .
+    private void jBPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPuntoActionPerformed
+        // TODO add your handling code here:
+        contenido =jText.getText();
+        
+        if(contenido.length()<=0){
+            jText.setText("0.");
+        }else{
+            
+            if(jText.getText().contains(".")){
+                
+            }else{
+                jText.setText(jText.getText()+".");
+                //punto=false;
+            }
+        }
+    }//GEN-LAST:event_jBPuntoActionPerformed
+
+    //Sumar
+    private void jBSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSumaActionPerformed
+        // TODO add your handling code here:
+         if(!jText.getText().equals("")){
+            valor1=jText.getText();
+            signo="+";
+            jText.setText("");
+        }
+        
+    }//GEN-LAST:event_jBSumaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,9 +526,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jB7;
     private javax.swing.JButton jB8;
     private javax.swing.JButton jB9;
+    private javax.swing.JButton jBBorrar;
+    private javax.swing.JButton jBCE;
     private javax.swing.JButton jBDivision;
-    private javax.swing.JButton jBEliminar;
     private javax.swing.JButton jBIgual;
+    private javax.swing.JButton jBLimpiar;
     private javax.swing.JButton jBMasMenos;
     private javax.swing.JButton jBMultiplicacion;
     private javax.swing.JButton jBPorcentaje;
@@ -222,8 +539,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jBResta;
     private javax.swing.JButton jBSuma;
     private javax.swing.JButton jBUnoX;
-    private javax.swing.JButton jBborrar;
-    private javax.swing.JButton jButton25;
     private javax.swing.JMenu jMEdit;
     private javax.swing.JMenu jMHelp;
     private javax.swing.JMenu jMView;
