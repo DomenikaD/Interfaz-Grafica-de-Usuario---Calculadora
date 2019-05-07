@@ -26,9 +26,11 @@ Usuario: DomenikaD
 ![2](https://user-images.githubusercontent.com/49033904/57277921-c8401d00-706a-11e9-8277-553085ef5947.jpg)
 
 3.	Paquete vista:
+
 ![3](https://user-images.githubusercontent.com/49033904/57277945-d7bf6600-706a-11e9-840f-dd9fd9ac7cc5.jpg)
 
 4.	Código:
+
 /*Para sacar el % primero se debe ingresar asi: 
  El valor del procentaje: '6' %
  '%' (Aplastar el boton de Porcentaje '*' y digitar el siguiente numero)
