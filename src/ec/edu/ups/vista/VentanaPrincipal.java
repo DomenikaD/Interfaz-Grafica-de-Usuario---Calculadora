@@ -393,9 +393,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     //Porcentaje %
     private void jBPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPorcentajeActionPerformed
         if(!jText.getText().equals("")){
-            valor1=jText.getText();
+            valor1=(jText.getText());
             signo="%";
             jText.setText("");
+            
         }
         
     }//GEN-LAST:event_jBPorcentajeActionPerformed
