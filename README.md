@@ -7,16 +7,19 @@ INFORME
 
  	PRÁCTICA DE LABORATORIO 
 
-CARRERA: Computación	ASIGNATURA: Programación Aplicada
-NRO. PRÁCTICA:	4	TÍTULO PRÁCTICA: Interfaz Gráfica de Usuario (Calculadora, Tres en Raya & El Ahorcado)
+CARRERA: Computación			ASIGNATURA: Programación Aplicada
+NRO. PRÁCTICA:	4			TÍTULO PRÁCTICA: Interfaz Gráfica de Usuario (Calculadora, Tres en Raya & El Ahorcado)
 OBJETIVO ALCANZADO: Construir interfaces gráficas de usuario
 ACTIVIDADES DESARROLLADAS
+
 Calculadora
+
 1.	Creación de un repositorio en GitHub:
 ![1](https://user-images.githubusercontent.com/49033904/57277899-b9596a80-706a-11e9-90fd-67b2cb3cfaec.jpg)
 
  
 Link: https://github.com/DomenikaD/Interfaz-Grafica-de-Usuario---Calculadora/tree/master
+
 Usuario: DomenikaD
 
 2.	Commits:
