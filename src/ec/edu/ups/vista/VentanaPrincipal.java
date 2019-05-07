@@ -1,3 +1,9 @@
+/*Para sacar el % primero se debe ingresar asi: 
+ El valor del procentaje: '6' %
+ '%' (Aplastar el boton de Porcentaje '*' y digitar el siguiente numero)
+ Ejemplo --> [6% * 8 = 0.48]
+ Se ingresa siempre el valor del porcentaje primero
+*/
 
 package ec.edu.ups.vista;
 
@@ -9,14 +15,15 @@ package ec.edu.ups.vista;
  * que permite realizar operaciones aritméticas de complejidad básica
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
-
-    //private boolean punto=true;
+    
     String valor1, valor2,signo,contenido;
     Double res;
+    
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaPrincipal() {
+        
         //Titulo de la Ventana
         setTitle("Calculadora");
         initComponents();
@@ -274,7 +281,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      public static String operaciones(String valor1, String valor2, String signo){
         Double resulCalc=0.0;
         String respuesta;
-        // las 5 opreaciones 
+        
+        //Las 4 opreaciones 
         if(signo.equals("+")){
             resulCalc= Double.parseDouble(valor1)+Double.parseDouble(valor2);
             
@@ -287,7 +295,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     }else if(signo.equals("/")){
                         resulCalc= Double.parseDouble(valor1)/Double.parseDouble(valor2);
                     }else if(signo.equals("%")){
-                        resulCalc= (Double.parseDouble(valor1))*(Double.parseDouble(valor2)/100);
+                        resulCalc= (Double.parseDouble(valor1))*(Double.parseDouble(valor2)/100); 
                     }
                     respuesta=resulCalc.toString();
                     return respuesta;
@@ -391,6 +399,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jBDivisionActionPerformed
 
     //Porcentaje %
+    //Para sacar el % primero se debe ingresar asi: 6 '%'(Aplastar el boton de Porcentaje)* 8 = 0.48, el porcentaje va primero
     private void jBPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPorcentajeActionPerformed
         if(!jText.getText().equals("")){
             valor1=(jText.getText());
