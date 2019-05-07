@@ -646,7 +646,8 @@ Las Interfaces Graficas de Usuario
 
          Calculadora    
 	 
-         ![7](https://user-images.githubusercontent.com/49033904/57277950-d7bf6600-706a-11e9-9eff-19f4ee018b04.jpg)
+![7](https://user-images.githubusercontent.com/49033904/57278318-ca56ab80-706b-11e9-8adb-05a6821c0296.jpg)
+
  
 
 CONCLUSIONES: Podemos llegar a realizar diferentes interfaces utilizando código que nos puede generar Netbeans, de esto se puede entender el funcionamiento de casa cosa & tener en cuenta que un arreglo puede ser muy útil al rato de crear juegos, como por ejemplo: Tres en Raya & El Ahorcado. 
