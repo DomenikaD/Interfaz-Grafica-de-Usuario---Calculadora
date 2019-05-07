@@ -622,28 +622,38 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
 	
 5.	Diseño:
+
 ![4](https://user-images.githubusercontent.com/49033904/57277946-d7bf6600-706a-11e9-937f-bed036558e5e.jpg)
  
 6.	Funcionamiento:
+
 ![5](https://user-images.githubusercontent.com/49033904/57277948-d7bf6600-706a-11e9-8d19-3a60008cb834.jpg)
 
 Ejemplo:
+
 Suma --> 2 + 2 = 4
+
 ![6](https://user-images.githubusercontent.com/49033904/57277949-d7bf6600-706a-11e9-8680-abcf65b78cb6.jpg)
  
 7.	Explicación del funcionamiento de la Interfaz gráfica de usuario – Calculadora:
+
 Este proyecto es de una calculadora en el lenguaje de programación de Java con base de layouts, botones y cajas de texto que nos permite realizar operaciones aritméticas de complejidad básica. Tales operaciones son: suma, resta, multiplicación, división, raíz cuadrada, porcentaje, entre otras.
 
 
 RESULTADO(S) OBTENIDO(S):
+
 Las Interfaces Graficas de Usuario
-         Calculadora                                            
+
+         Calculadora    
+	 
          ![7](https://user-images.githubusercontent.com/49033904/57277950-d7bf6600-706a-11e9-9eff-19f4ee018b04.jpg)
  
 
 CONCLUSIONES: Podemos llegar a realizar diferentes interfaces utilizando código que nos puede generar Netbeans, de esto se puede entender el funcionamiento de casa cosa & tener en cuenta que un arreglo puede ser muy útil al rato de crear juegos, como por ejemplo: Tres en Raya & El Ahorcado. 
 
+
 RECOMENDACIONES: Tener en cuenta la implementación con base de layouts, los botones y cajas de texto que nos permite realizar en un JFrame  y tener como resultado el código Generadotra. Ejemplo: La calculadora.
+
 
 Nombre de estudiante: Domenika Delgado
 
