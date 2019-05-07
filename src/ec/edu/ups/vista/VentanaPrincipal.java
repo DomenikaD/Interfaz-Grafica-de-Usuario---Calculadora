@@ -11,12 +11,14 @@ package ec.edu.ups.vista;
 public class VentanaPrincipal extends javax.swing.JFrame {
 
     //private boolean punto=true;
-    String valor1, valor2, signo, contenido;
-    Double resul;
+    String valor1, valor2,signo,contenido;
+    Double res;
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaPrincipal() {
+        //Titulo de la Ventana
+        setTitle("Calculadora");
         initComponents();
     }
 
@@ -275,16 +277,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // las 5 opreaciones 
         if(signo.equals("+")){
             resulCalc= Double.parseDouble(valor1)+Double.parseDouble(valor2);
+            
                     }else if(signo.equals("-")){ 
                     resulCalc= Double.parseDouble(valor1)-Double.parseDouble(valor2);
+                    
                     }else if(signo.equals("*")){
                         resulCalc= Double.parseDouble(valor1)*Double.parseDouble(valor2);
             
                     }else if(signo.equals("/")){
                         resulCalc= Double.parseDouble(valor1)/Double.parseDouble(valor2);
-            
-                    }else if(signo.equals("x^y")){
-                        resulCalc= Math.pow(Double.parseDouble(valor1), Double.parseDouble(valor2));
+                    }else if(signo.equals("%")){
+                        resulCalc= (Double.parseDouble(valor1))*(Double.parseDouble(valor2)/100);
                     }
                     respuesta=resulCalc.toString();
                     return respuesta;
@@ -306,16 +309,36 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     //CE
     private void jBCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCEActionPerformed
         // TODO add your handling code here:
+        String c;
+        c = jText.getText();
+
+        if (c.length() > 0) {
+            c = c.substring(0, c.length() - 1);
+            jText.setText(c);
+        }
     }//GEN-LAST:event_jBCEActionPerformed
 
     //Borrar un numero mal ingresado
     private void jBBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarActionPerformed
         // TODO add your handling code here:
+        String c;
+        c = jText.getText();
+
+        if (c.length() > 0) {
+            c = c.substring(0, c.length() - 1);
+            jText.setText(c);
+        }
     }//GEN-LAST:event_jBBorrarActionPerformed
 
-    //Limpiar todo de la mini consola
+    //Limpiar todo de la mini consola C
     private void jBLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimpiarActionPerformed
         // TODO add your handling code here:
+        if(!jText.getText().equals("")){
+            valor1=jText.getText();
+            signo="c";
+            jText.setText("");
+        }
+        
         jText.setText(" ");
     }//GEN-LAST:event_jBLimpiarActionPerformed
 
@@ -324,8 +347,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         contenido=jText.getText();
          if(contenido.length()>0){
-             resul=(-1)*Double.parseDouble(contenido);
-            jText.setText(resul.toString());
+             res =(-1)*Double.parseDouble(contenido);
+            jText.setText(res.toString());
          }
     }//GEN-LAST:event_jBMasMenosActionPerformed
 
@@ -334,8 +357,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         contenido=jText.getText();
         if(contenido.length()>0){
-            resul=Math.sqrt(Double.parseDouble(contenido));
-            jText.setText(resul.toString());
+            res = Math.sqrt(Double.parseDouble(contenido));
+            jText.setText(res.toString());
         }
     }//GEN-LAST:event_jBRaizActionPerformed
 
@@ -369,7 +392,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     //Porcentaje %
     private void jBPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPorcentajeActionPerformed
-        // TODO add your handling code here:
+        if(!jText.getText().equals("")){
+            valor1=jText.getText();
+            signo="%";
+            jText.setText("");
+        }
+        
     }//GEN-LAST:event_jBPorcentajeActionPerformed
 
     //Numero 4
@@ -400,8 +428,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         contenido=jText.getText();
         if(contenido.length()>0){
-            resul=1/(Double.parseDouble(contenido));
-            jText.setText(resul.toString());
+            res = 1/(Double.parseDouble(contenido));
+            jText.setText(res.toString());
             
         }
     }//GEN-LAST:event_jBUnoXActionPerformed
